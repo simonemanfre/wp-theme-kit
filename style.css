@@ -1,0 +1,176 @@
+/*
+Theme Name: WP Theme Kit
+Author: Simone Manfredini
+Author URI: http://www.trapstudio.it/
+Version: 1.0
+Text Domain: wp-theme-kit
+*/
+/*
+HEIGHT 100VH ON MOBILE
+Importante per la Safe Area su mobile
+Usare var(--app-height) che viene aggiornato in JS
+Esempio:
+
+.c-hero {
+  height: var(--app-height);
+}
+*/
+:root {
+  --app-height: 100vh;
+}
+/*STICKY FOOTER*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.l-main {
+  flex: 1;
+}
+/*WORDPRESS*/
+.alignleft {
+  display: block;
+  margin-bottom: 10px;
+}
+.alignright {
+  display: block;
+  margin-bottom: 10px;
+}
+.aligncenter {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.error404 .c-page-header,
+.error404 .c-content__text {
+  text-align: center;
+}
+/*INPUT DATE*/
+input[type="date"] {
+  position: relative;
+  padding-right: 50px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background-size: 20px;
+  background-position: right 5px center;
+  cursor: pointer;
+}
+/*FOOTER*/
+.c-top-button {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background-color: #ed1c24;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+  z-index: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+.c-top-button svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+.u-is-scrolled .c-top-button {
+  display: flex;
+}
+/*VIEW MORE PER CARICAMENTO ARTICOLI*/
+@-webkit-keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    transform: rotate(135deg);
+    stroke-dashoffset: 46.75;
+  }
+  100% {
+    transform: rotate(450deg);
+    stroke-dashoffset: 187;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    transform: rotate(135deg);
+    stroke-dashoffset: 46.75;
+  }
+  100% {
+    transform: rotate(450deg);
+    stroke-dashoffset: 187;
+  }
+}
+.c-button.u-loading {
+  position: relative;
+  padding-right: 75px;
+}
+.c-button.u-loading .spinner {
+  position: absolute;
+  top: calc(50% - 13px);
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  -webkit-animation: rotator 1.4s linear infinite;
+  animation: rotator 1.4s linear infinite;
+}
+.c-button.u-loading .path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+  stroke: #fff;
+  transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite;
+  animation: dash 1.4s ease-in-out infinite;
+}
+@media screen and (min-width: 480px) {
+}
+@media screen and (min-width: 768px) {
+  .alignleft {
+    margin-right: 10px;
+    float: left;
+    clear: left;
+  }
+  .alignright {
+    margin-left: 10px;
+    float: right;
+    clear: right;
+  }
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1280px) {
+}
